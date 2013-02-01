@@ -3,6 +3,7 @@ import threading
 import time
 
 from constants import *
+from pyliquid.inlinejs import InlineJsChangeSet
 from pyliquid.pycallback import PyCallbackChangeSet
 
 logger = logging.getLogger('pyliquib')
@@ -12,6 +13,9 @@ def run(db, change_sets):
 
 def pycall(id, author, callback, comment=''):
 	return PyCallbackChangeSet(id, author, callback, comment)
+
+def js(id, author, js, comment=''):
+	return InlineJsChangeSet(id, author, js, comment)
 
 def __run(db, change_sets, lock=threading.RLock()):
 	with lock:
