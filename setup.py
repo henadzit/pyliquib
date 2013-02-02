@@ -1,8 +1,8 @@
 """
 Pyliquib
------
+========
 
-See <https://github.com/gtsarik/pyliquib> for documentation.
+See https://github.com/gtsarik/pyliquib for documentation.
 """
 from setuptools import setup
 
