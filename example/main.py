@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from pyliquid import pycall, run, js
+from pyliquib import pycall, run, js
 
 def __1(db):
 	db.users.insert({'name': 'Henadzi Tsaryk'})
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 	change_sets = (
 		pycall('1', 'user@example.com', __1, 'It\'s a comment! The change set is executed with a python callback.'),
 		pycall('2', 'user@example.com', __2),
-	    js('3', 'another.user@example.com', __3, 'This change set is an inline js which is executed by\
+		js('3', 'another.user@example.com', __3, 'This change set is an inline js which is executed by\
 	     the MongoDB engine.')
 	)
 

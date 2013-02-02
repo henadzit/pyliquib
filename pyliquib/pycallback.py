@@ -1,4 +1,4 @@
-from pyliquid.basechangeset import BaseChangeSet
+from pyliquib.basechangeset import BaseChangeSet
 
 class PyCallbackChangeSet(BaseChangeSet):
 	def __init__(self, id, author, callback, comment):

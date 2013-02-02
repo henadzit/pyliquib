@@ -3,8 +3,8 @@ import threading
 import time
 
 from constants import *
-from pyliquid.inlinejs import InlineJsChangeSet
-from pyliquid.pycallback import PyCallbackChangeSet
+from pyliquib.inlinejs import InlineJsChangeSet
+from pyliquib.pycallback import PyCallbackChangeSet
 
 logger = logging.getLogger('pyliquib')
 

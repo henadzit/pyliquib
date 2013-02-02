@@ -1,4 +1,4 @@
-from pyliquid.basechangeset import BaseChangeSet
+from pyliquib.basechangeset import BaseChangeSet
 
 class InlineJsChangeSet(BaseChangeSet):
 	def __init__(self, id, author, js, comment):
