@@ -3,13 +3,14 @@ import datetime
 from constants import *
 
 class BaseChangeSet(object):
-	def __init__(self, id, author, comment=''):
+	def __init__(self, id, author, comment='', always=False):
 		self.id = id
 		self.author = author
 		self.comment = comment
+		self.always = always
 
 	def execute(self, db):
-		if not self._executed(db):
+		if self.always or not self._executed(db):
 			self._execute(db)
 			self._log(db)
 
@@ -24,4 +25,4 @@ class BaseChangeSet(object):
 		              'author': self.author,
 		              'comment': self.comment,
 		              'executed': datetime.datetime.utcnow()}
-		db[LIQUIB_LOG].insert(log_record)
+		db[LIQUIB_LOG].update({'id': self.id}, log_record, upsert=True)
