@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
 	name='pyliquib',
-    version='0.1',
+    version='0.1.1',
     packages=['pyliquib',]  ,
     license='BSD',
     url='https://github.com/gtsarik/pyliquib',
