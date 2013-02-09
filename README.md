@@ -26,8 +26,9 @@ Define change sets:
             __1,                # python function which takes a db reference
             'A comment. It's optional.'),
         js('2', 'user2@example.com',
-            'db.users.update({}, {password_hash: {"$set": null}})') # a plain javascript code which will be
+            'db.users.update({}, {password_hash: {"$set": null}}, {multi: true})') # a plain javascript code which will be
                                                                     # executed on the MongoDB side once
+		pycall('3', 'user@example.com', __3, always=True) # set always=True if you need the change set is run each time
     )
 
 Run pyliquib:
