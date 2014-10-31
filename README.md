@@ -1,10 +1,9 @@
 # PyLiquib
 
-A tool for MongoDB migrations with PyMongo.
+A tool for tracking, managing and applying MongoDB ~~schema~~ changes.
 
 ## Overview
-Pyliquib was inspired by Liquibase which is a java tool for migrations on relational databases. Pyliquib is
-a migration tool for MongoDB and pymongo based applications.
+Pyliquib was inspired by Liquibase which is a java tool for schema managing of relational databases. Pyliquib is the same kind of tool but for MongoDB and pymongo based applications.
 
 ## Usage
 Define an iterable object of change sets and submit it to `pyliquib.run` along with a reference to
@@ -35,7 +34,7 @@ Run pyliquib:
 
 	run(MongoClient().test, change_sets)
 
-Extend change_sets when you need new migrations. That's it.
+Add new change_sets when you need to apply new changes. That's it.
 
 ## Implementation notes
 
